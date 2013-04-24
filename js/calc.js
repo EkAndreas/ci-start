@@ -18,7 +18,7 @@
 			var I = (params.rate / 100) / params.period;
 			var v = Math.pow((1 + I), N);
 			var t = (I * v) / (v - 1);
-			var result = params.balance * t;
+			var result = params.balance * t+10;
 
 			return result;
 
