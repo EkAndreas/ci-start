@@ -1,0 +1,43 @@
+ifconfig (ip-address)
+
+sudo apt-get install openssh-server
+sudo apt-get install default-jre
+java -version
+
+
+wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+
+sudo apt-get update && sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic xvfb x11-apps imagemagick firefox
+
+cd /tmp
+wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar
+mkdir /var/lib/selenium
+cp selenium-server-standalone-2.32.0.jar /var/lib/selenium/selenium.jar
+
+sudo nano /etc/init.d/xvfb
+
+#!/bin/bash
+if [ -z "$1" ]; then
+  echo "`basename $0` {start|stop}"
+  exit
+fi
+
+case "$1" in
+start)
+  /usr/bin/Xvfb :99 -ac -screen 0 1024x768x8 &
+;;
+stop)
+  killall Xvfb
+;;
+esac
+
+sudo chmod 755 /etc/init.d/xvfb
+
+sudo update-rc.d xvfb defaults 10
+
+
+

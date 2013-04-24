@@ -1,0 +1,16 @@
+#calculator label, div input, div select {
+	display: block;
+	margin: 0.5em 0;
+}
+
+#calculator label {
+	font-weight: bold;
+}
+
+#calculator form p {
+	margin: 0.5em 0;
+}
+
+.calc_result{
+	font-size: 24px;
+}
