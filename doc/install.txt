@@ -1,23 +1,29 @@
-ifconfig (ip-address)
+#Ta reda på adresserna till din virtuella server!
+ifconfig
 
-sudo apt-get install openssh-server
-sudo apt-get install default-jre
-java -version
+#logga in som root!
+sudo su
 
+#installera ssh
+apt-get install openssh-server
 
+#modifiera hostfilen
+nano /etc/hosts
+#exempelvis: 10.211.55.2	ci.local
+
+#uppdatera servern
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install jenkins
+sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+apt-get update && apt-get upgrade -y
 
+#installera alla tjänster
+apt-get install -y default-jre git xvfb firefox jenkins
 
-sudo apt-get update && sudo apt-get install -y xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic xvfb x11-apps imagemagick firefox
+#länka firefox (bug i selenium)
+ln -s /usr/lib/firefox/firefox /usr/bin/firefox-bin
 
-sudo ln -s /usr/lib/firefox/firefox /usr/bin/firefox-bin
-
-
-cd /tmp
+#installera selenium standalone
 wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar
-mkdir /var/lib/selenium
-cp selenium-server-standalone-2.32.0.jar /var/lib/selenium/selenium.jar
+mkdir -p /var/lib/selenium
+mv selenium-server-standalone-2.32.0.jar /var/lib/selenium/selenium.jar
 
