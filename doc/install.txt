@@ -1,13 +1,17 @@
-#Ta reda på adresserna till din virtuella server!
-ifconfig
+# virtuell maskin, Ubuntu 12-10
 
-#logga in som root!
+# logga in som root!
 sudo su
 
-#installera ssh
-apt-get install openssh-server
+# ta reda på adresserna till din virtuella server!
+ifconfig
 
-#modifiera hostfilen
+# installera ssh
+apt-get install -y openssh-server
+
+# logga in med terminalklient istället för virtuell player/win
+
+# modifiera hostfilen
 nano /etc/hosts
 #exempelvis: 10.211.55.2	ci.local
 

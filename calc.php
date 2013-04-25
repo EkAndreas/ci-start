@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: wpmeetup
+Plugin Name: Calc Demo
 Description: Calc example to WP Meetup Demo
 Author: EkAndreas
 Version: 1.0
@@ -55,8 +55,8 @@ class WPMeetUp_Calc{
 
 	function scripts(){
 
-		wp_enqueue_style( 'calc-css', WP_PLUGIN_URL . '/wpmeetup/css/calc.css' );
-		wp_enqueue_script( 'calc-js', WP_PLUGIN_URL . '/wpmeetup/js/calc.js', array( 'jquery' ) );
+		wp_enqueue_style( 'calc-css', WP_PLUGIN_URL . '/calc/css/calc.css' );
+		wp_enqueue_script( 'calc-js', WP_PLUGIN_URL . '/calc/js/calc.js', array( 'jquery' ) );
 
 	}
 
