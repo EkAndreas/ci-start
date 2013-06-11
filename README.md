@@ -1,4 +1,4 @@
-wpmeetup
-========
+geekmeetvas
+===========
 
-Dokument, skript, installation och plugin för demo WP Meetup Norrköping 2013-04-26
+Dokument, skript, installation och plugin för demo Geek Meet VAS 2013-06-12
