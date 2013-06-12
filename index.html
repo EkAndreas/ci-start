@@ -1,118 +1,118 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-	<meta charset="utf-8">
-	<title>CI DEMO CART</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Ubuntu orange and unique font.">
-	<meta name="author" content="Thomas Park">
 
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+<html lang="en">
 
-	<link href="http://bootswatch.com/united/bootstrap.min.css" rel="stylesheet">
+	<head>
+		<meta charset="utf-8">
+		<title>CI DEMO CART</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Ubuntu orange and unique font.">
+		<meta name="author" content="Thomas Park">
 
-	<style>
-		body { margin-top: 80px; padding: 40px; }
-	</style>
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-</head>
+		<link href="http://bootswatch.com/united/bootstrap.min.css" rel="stylesheet">
 
-<body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+		<style>
+			body {
+				margin-top: 80px;
+				padding: 40px;
+			}
+		</style>
 
-<!-- Navbar
-	================================================== -->
-<div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="../">Continuous Integration Demo</a>
-			<div class="nav-collapse collapse" id="main-menu">
-				<ul class="nav" id="main-menu-left">
-				</ul>
-				<ul class="nav pull-right" id="main-menu-right">
-					<li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);" data-original-title="Showcase of Bootstrap sites &amp; apps">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
-					<li><a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" title="" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);" data-original-title="Marketplace for premium Bootstrap templates">WrapBootstrap <i class="icon-share-alt"></i></a></li>
-				</ul>
+	</head>
+
+	<body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+
+		<!-- Navbar
+			================================================== -->
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="../">Continuous Integration Demo</a>
+
+					<div class="nav-collapse collapse" id="main-menu">
+						<ul class="nav" id="main-menu-left">
+						</ul>
+						<ul class="nav pull-right" id="main-menu-right">
+							<li>
+								<a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);" data-original-title="Showcase of Bootstrap sites &amp; apps">Built With Bootstrap
+									<i class="icon-share-alt"></i></a></li>
+							<li>
+								<a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" title="" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);" data-original-title="Marketplace for premium Bootstrap templates">WrapBootstrap
+									<i class="icon-share-alt"></i></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
 
-<div class="container">
+		<div class="container">
 
-	<div class="row-fluid">
+			<div class="row-fluid">
 
-		<div class="span12">
+				<div class="span12">
 
-			<table class="table table-bordered table-striped">
-				<thead>
-				<tr>
-					<th width='25%'>Category</th>
-					<th width='25%'>Product</th>
-					<th class='price' width='15%'>Price</th>
-					<th class='quantity' width='10%'>Quantity</th>
-					<th class='price' width='15%'>Subtotal</th>
-					<th width='10%'></th>
-				</tr>
-				</thead>
-				<tbody data-bind='foreach: lines'>
-				<tr>
-					<td>
-						<select data-bind='options: sampleProductCategories, optionsText: "name", optionsCaption: "Select...", value: category'> </select>
-					</td>
-					<td data-bind="with: category">
-						<select data-bind='options: products, optionsText: "name", optionsCaption: "Select...", value: $parent.product'> </select>
-					</td>
-					<td class='price' data-bind='with: product'>
-						<span data-bind='text: formatCurrency(price)'> </span>
-					</td>
-					<td class='quantity'>
-						<input data-bind='visible: product, value: quantity, valueUpdate: "afterkeydown"' />
-					</td>
-					<td class='price'>
-						<span data-bind='visible: product, text: formatCurrency(subtotal())'> </span>
-					</td>
-					<td>
-						<a href='#' data-bind='click: $parent.removeLine'>Remove</a>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			<p class='grandTotal'>
-				Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
-			</p>
-			<button class="btn btn-success" data-bind='click: addLine'>Add product</button>
-			<button class="btn btn-danger" data-bind='click: save'>Submit order</button>
+					<table class="table table-bordered table-striped">
+						<thead>
+						<tr>
+							<th width='25%'>Category</th>
+							<th width='25%'>Product</th>
+							<th class='price' width='15%'>Price</th>
+							<th class='quantity' width='10%'>Quantity</th>
+							<th class='price' width='15%'>Subtotal</th>
+							<th width='10%'></th>
+						</tr>
+						</thead>
+						<tbody data-bind='foreach: lines'>
+						<tr>
+							<td>
+								<select data-bind='options: sampleProductCategories, optionsText: "name", optionsCaption: "Select...", value: category'> </select>
+							</td>
+							<td data-bind="with: category">
+								<select data-bind='options: products, optionsText: "name", optionsCaption: "Select...", value: $parent.product'> </select>
+							</td>
+							<td class='price' data-bind='with: product'>
+								<span data-bind='text: formatCurrency(price)'> </span>
+							</td>
+							<td class='quantity'>
+								<input data-bind='visible: product, value: quantity, valueUpdate: "afterkeydown"' />
+							</td>
+							<td class='price'>
+								<span data-bind='visible: product, text: formatCurrency(subtotal())'> </span>
+							</td>
+							<td>
+								<a href='#' data-bind='click: $parent.removeLine'>Remove</a>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<p class='grandTotal'>
+						Total value: <span data-bind='text: formatCurrency(grandTotal())'> </span>
+					</p>
+					<button class="btn btn-success" data-bind='click: addLine'>Add product</button>
+					<button class="btn btn-danger" data-bind='click: save'>Submit order</button>
+
+				</div>
+
+			</div>
 
 		</div>
 
-	</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src='js/knockout-2.2.1.js'></script>
 
-</div>
+		<script src="js/sampleProductCategories.js"></script>
+		<script src="js/cart.js"></script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script type='text/javascript' src='js/knockout-2.2.1.js'></script>
+	</body>
 
-<script src="js/sampleProductCategories.js"></script>
-<script src="js/cart.js"></script>
-
-</body></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
