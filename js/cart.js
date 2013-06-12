@@ -22,7 +22,7 @@ var Cart = function() {
 	var self = this;
 	self.lines = ko.observableArray([new CartLine()]); // Put one line in by default
 	self.grandTotal = ko.computed(function() {
-		var total = 70;
+		var total = 0;
 		$.each(self.lines(), function() { total += this.subtotal() })
 		return total;
 	});
