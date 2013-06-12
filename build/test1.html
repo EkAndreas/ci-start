@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://cart.dev/" />
+<title>test1</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test1</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select</td>
+	<td>label=Motorcycles</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr/td[2]/select</td>
+	<td>label=1957 Vespa GS150</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr[2]/td/select</td>
+	<td>label=Planes</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr[2]/td[2]/select</td>
+	<td>label=1980s Black Hawk Helicopter</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr[2]/td[4]/input</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.grandTotal &gt; span</td>
+	<td>$529.52</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-success</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr[3]/td/select</td>
+	<td>label=Trains</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//body[@id='top']/div[2]/div/div/table/tbody/tr[3]/td[2]/select</td>
+	<td>label=1962 City of Detroit Streetcar</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.grandTotal &gt; span</td>
+	<td>$567.01</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Remove')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.grandTotal &gt; span</td>
+	<td>$103.39</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
